@@ -1,7 +1,9 @@
 package com.dafaak.spring;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 
 record Address(String street, String number) {
@@ -28,12 +30,21 @@ public class HelloWorldConfiguration {
         return 31;
     }
 
+
     @Bean(name = "customBeanName")
+    @Primary
     public Address address() {
         return new Address("La colmena", "e1-238");
     }
 
     @Bean
+    @Qualifier("address2qualifier")
+    public Address address2() {
+        return new Address("Montufar y Colmena", "e1-238");
+    }
+
+    @Bean
+    @Primary
     public Person person() {
         return new Person("Jose", 20, new Address("Montufar", "e1-234"));
     }
@@ -45,7 +56,7 @@ public class HelloWorldConfiguration {
 
 
     @Bean
-    public Person person3(String name2, int age, Address address) {
+    public Person person3(String name2, int age, @Qualifier("address2qualifier") Address address) {
         return new Person(name2, age, address);
     }
 }
