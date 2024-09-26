@@ -1,5 +1,8 @@
 package com.dafaak.spring.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SuperContraGame implements Game {
     public void up() {
         System.out.println("look up!");

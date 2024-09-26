@@ -1,6 +1,10 @@
 package com.dafaak.spring.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class GameRunner {
+
     private Game game;
 
     public GameRunner(Game game) {

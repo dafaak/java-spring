@@ -1,6 +1,9 @@
 package com.dafaak.spring.game;
 
-public class PacmanGame implements Game{
+import org.springframework.stereotype.Component;
+
+//@Component
+public class PacmanGame implements Game {
 
     public void up() {
         System.out.println("Go up!");
