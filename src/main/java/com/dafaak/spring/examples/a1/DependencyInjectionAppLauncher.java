@@ -16,7 +16,7 @@ class YourBusinessClass {
 
     Dependency2 dependency2;
 
-    @Autowired
+//    @Autowired
     public YourBusinessClass(Dependency1 dependency1, Dependency2 dependency2) {
         System.out.println("Contructor injection");
         this.dependency1 = dependency1;
