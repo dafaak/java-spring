@@ -1,6 +1,5 @@
-package com.dafaak.spring;
+package com.dafaak.spring.game;
 
-import com.dafaak.spring.game.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
